@@ -736,7 +736,8 @@ hr {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   text-align: left;
   margin: auto;
-  height: 230px;
+  min-height: 250px;
+  height: auto;
 }
 
 .testimonial-header {
