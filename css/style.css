@@ -9,6 +9,191 @@
 *{
   font-family: "Montserrat", sans-serif !important;
 }
+.onlineregistration {
+  text-decoration: none;
+  color: #fff;
+  font: 14px Montserrat;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--b-radius);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.onlineregistration svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.onlineregistration:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.onlineregistration:hover svg {
+  transform: scale(1.1);
+}
+
+.wrapper {
+  height: 100vh;
+  background: #333;
+}
+
+#main-div {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 0;
+}
+#main-button .icon-close { display: none; }
+#main-button.open .icon-mail { display: none; }
+#main-button.open .icon-close { display: block; }
+
+
+#main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  width: 60px;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+#main-button:hover {
+  background-color: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(1.08);
+}
+
+
+#main-button~.onlineregistration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  visibility: hidden;
+  font-weight: 600;
+  text-decoration: none;
+  height: 50px;
+  padding: 0 25px;
+  color: #fff;
+  background:#f39032;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  position: absolute;
+  z-index: -1;
+  right: 0 !important;
+  bottom: 0 !important;
+  opacity: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 30px;
+  font-size: 14px;
+  
+}
+
+#main-button.open~.onlineregistration {
+  visibility: visible;
+  right: 80px !important;
+  opacity: 1;
+  transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+
+#main-button.open~.onlineregistration:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateX(-4px);
+}
+
+
+#main-button~.wrappericon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 55px;
+  width: 55px;
+  opacity: 0;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+#main-button.open~.wrappericon {
+  opacity: 1;
+  transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+
+#main-button.open~.wrappericon:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(1.12);
+}
+
+#main-button.open~#wrapperwp {
+  bottom: 70px;
+  background: linear-gradient(0deg, #00b100, #09db09);
+}
+
+#main-button.open~#wrappertg {
+  bottom: 140px;
+  background: linear-gradient(0deg, #017ab1, #01abe6) !important;
+}
+
+#main-button.open~#wrappermail {
+  bottom: 210px;
+  background: linear-gradient(0deg, #0078ff, #00c6ff)
+}
+
+.wave {
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wrapper {
+  display: block;
+  position: absolute;
+  z-index: 200;
+}
+
+@keyframes wave {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(79, 172, 254, 0);
+  }
+}
+
+.open {
+  animation-iteration-count: 1;
+}
 .container{
     max-width: 1300px;
     padding: 0 30px;

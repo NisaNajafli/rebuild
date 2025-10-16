@@ -21,4 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 });
+const mainButton = document.getElementById('main-button');
+
+mainButton.addEventListener('click', function () {
+  this.classList.toggle('open');
+});
 document.getElementById('year').textContent = new Date().getFullYear();
