@@ -405,7 +405,7 @@ hr {
 
 .banner-left h1 {
       font-size: 48px;
-    font-weight: 4000;
+    font-weight: 400;
   margin-bottom: 45px;
   line-height: 1.2;
 }
@@ -1151,7 +1151,7 @@ footer .buttonconsultt {
   width: fit-content;
   background: var(--main-color);
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   padding: 14px 36px;
   border-radius: 10px;
@@ -1199,7 +1199,9 @@ footer .buttonconsultt:hover {
   .footer-links,
   .footer-right {
     width: 100%;
-    text-align: center;
+  }
+  .footer-content{
+    gap: 0;
   }
   .footer-left p {
     max-width: 100%;
@@ -1217,4 +1219,102 @@ html {
 }
 :target {
   scroll-margin-top: 100px;
+}
+@media (max-width: 1200px){
+  .banner-right{
+    width: 35%;
+  }
+  .banner-content{
+    justify-content: center;
+  }
+
+}
+@media (max-width: 992px){
+  .banner-right{
+    display: none;
+  }
+  .banner-content{
+    align-items:center
+  }
+  .nav-menu ul{
+    gap: 15px;
+  }
+  .nav-menu ul li a{
+    font-size: 15px;
+  }
+  .nav-bottom{
+    gap: 13px;
+  }
+  .advantages__section-cards{
+    flex-direction: column;
+    gap: 20px;
+   
+  }
+  .advantages-card{
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px){
+  .nav-menu{
+    display: none;
+  }
+  .about__section-content{
+    grid-template-columns: 1fr;
+  }
+  .footer-content{
+    flex-direction: column;
+    align-items:center;
+    gap: 20px;
+  }
+  .footer-left,
+  .footer-links,
+  .footer-right {
+    text-align: left;
+  }
+
+}
+@media (max-width: 662px){
+  #nav-adress{
+    margin-right: 0;
+  }
+  h2{
+    font-size: 32px;
+  }
+  .advantages__section-content > p{
+    width: 100%;
+  }
+  .footer-bottom{
+    flex-direction: column;
+    gap: 10px;
+    align-items:center
+  }
+  .footer-bottom a{
+    text-align: center;
+  }
+}
+@media (max-width: 470px){
+  .advantages-card{
+    width: 100%;
+  }
+  .about__section-texts h2 {
+    font-size: 27px;
+  }
+  .about__section-imgs img{
+    width: 100%;
+  }
+  .about__section-imgs img:last-child{
+    display: none;
+  }
+  .nav-top{
+    display: none;
+  }
+  hr{
+    display: none;
+  }
+  nav .buttonconsultt{
+    width: fit-content;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
 }
